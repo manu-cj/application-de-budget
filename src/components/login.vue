@@ -16,6 +16,7 @@
 <script>
 
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: "login",
   data() {
     return {
@@ -41,6 +42,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
 }
 
 input {
