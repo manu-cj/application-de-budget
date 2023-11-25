@@ -47,15 +47,13 @@ class UserManager
                         $_SESSION['connected'] = '1';
                         $alert[] = "Connexion réussi";
                         if (count($alert) > 0) {
-                    
                            echo json_encode($alert);
                         }
                     }
                 } else {
                     $alert[] = "l'adresse mail ou le mot de passe ne correspond pas !";
                     if (count($alert) > 0) {
-                        echo json_encode($alert);
-                        
+                        echo json_encode($alert); 
                     }
                 }
             }
