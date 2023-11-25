@@ -5,15 +5,19 @@
     <br>
     <input type="password" v-model="password" placeholder="Entrez votre mot de passe">
     <br>
-    <button @click="connexion">Se connecter</button>
+    <button @click="login">Se connecter</button>
     <br>
     <p id="forgot-password-link">Mot de passe oublié</p>
     <br>
     <p id="register-link">s'inscrire</p>
   
   </div>
+
 </template>
 <script>
+import axios from "axios";
+ 
+
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -21,10 +25,32 @@ export default {
   data() {
     return {
       mail: '',
-      password: ''
+      password: '',
+      request: 'request'
 
     }
   },
+
+  methods : {
+    login() {
+      axios.post('http://localhost:8000/controller/loginController.php', {
+    mail: this.mail,
+    password: this.password,
+    request : this.request
+  })
+  .then(function (response) {
+    console.log(response.data);
+    if(response.data.length >= 1){
+      console.log("c'est bon");
+    }
+    
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+      
+    }
+  }
 
 }
 
