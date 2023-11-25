@@ -40,9 +40,7 @@ export default {
   })
   .then(function (response) {
     console.log(response.data);
-    if(response.data.length >= 1){
-      console.log("c'est bon");
-    }
+   
     
   })
   .catch(function (error) {
