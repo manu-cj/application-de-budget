@@ -1,5 +1,5 @@
 <?php
-
+ 
 require __DIR__ . '/../require.php';
 
 if ($data = json_decode(file_get_contents('php://input'), true)) {

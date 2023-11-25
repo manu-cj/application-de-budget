@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../require.php';
 
-// A re voir complètement les vérifications !
+// A revoir complètement les vérifications !
 
 if ($data = json_decode(file_get_contents('php://input'), true)) {
 
